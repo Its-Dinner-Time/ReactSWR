@@ -1,11 +1,11 @@
-import { UserAPI } from './swr';
+import UserState from './components/UserState';
 
 function App() {
-  const { user, isLoading, isError } = UserAPI.getUser({ userId: 'test' });
-
-  if (isLoading) return <div>Loading...</div>;
-  if (isError) return <div>Error...</div>;
-  return <div>{user.name}</div>;
+  return (
+    <>
+      <UserState />
+    </>
+  );
 }
 
 export default App;
